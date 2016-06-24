@@ -1,0 +1,31 @@
+// Place all the styles related to the music controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.mains {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	border: solid 2px;
+	padding: 5px;
+}
+.mains input {
+	margin-left: 250px;
+}
+.logout {
+	float: right;
+	margin-left: 15px;
+}
+.ns {
+	position: relative;
+	padding-bottom: 10px; 
+}
+.ns input {
+	position: absolute;
+	left: 400px;
+}
+
+td, th {
+	text-align: center;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+}

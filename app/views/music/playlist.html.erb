@@ -1,0 +1,18 @@
+<%=link_to 'Log Out', dologout_path, :class => 'logout'%>
+<%=link_to 'Home', songs_path, :class => 'logout'%>
+
+<h3><%=@user.fullname%>'s playlist</h3>
+<table>
+<thead>
+  <th>Artist</th>
+  <th>Title</th>
+  <th>Times Added</th>
+</thead>
+<%@user.playlists.each do |pl|%>
+  <tbody>
+  <td><%=pl.song.artist%></td>
+  <td><%=link_to pl.song.title, viewsong_path(pl.song.id)%></td>
+  <td><%=pl.count%></td>
+  </tbody>
+<%end%>
+</table>

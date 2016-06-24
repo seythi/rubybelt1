@@ -1,0 +1,15 @@
+<%=link_to 'Log Out', dologout_path, :class => 'logout'%>
+<%=link_to 'Home', songs_path, :class => 'logout'%>
+<h3>Others who added <%=@song.header%></h3>
+<table>
+<thead>
+  <th>User</th>
+  <th>Times Added</th>
+</thead>
+<%@song.playlists.each do |pl|%>
+  <tbody>
+  <td><%=link_to pl.user.fullname, viewplaylist_path(pl.user.id)%></td>
+  <td><%=pl.count%></td>
+  </tbody>
+<%end%>
+</table>

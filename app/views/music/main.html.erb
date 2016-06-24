@@ -1,0 +1,48 @@
+<div id='register' class='mains'>
+<h4>Register</h4>
+<form action="/doregister" accept-charset="UTF-8" method="post">
+<input name="utf8" value="✓" type="hidden">
+<%=token_tag nil%>
+  <div class="field">
+    <label for="firstname">First Name</label><br>
+    <input name="user[firstname]"  type="text">
+  </div>
+  <div class="field">
+    <label for="lastname">Last Name</label><br>
+    <input name="user[lastname]" type="text">
+  </div>
+  <div class="field">
+    <label for="email">Email</label><br>
+    <input name="user[email]"  type="text">
+  </div>
+  <div class="field">
+    <label for="user_password">Password</label><br>
+    <input name="user[password]"  type="password">
+  </div>
+  <div class="field">
+    <label for="user_passwordc">Confirm Password</label><br>
+    <input name="user[password_confirmation]" type="password">
+  </div>
+  <div class="actions">
+    <input name="commit" value="Create user" type="submit">
+  </div>
+</form>
+</div>
+<div id='login' class='mains'>
+<h4>Log In</h4>
+<form action="/dologin" accept-charset="UTF-8" method="post">
+<input name="utf8" value="✓" type="hidden">
+<%=token_tag nil%>
+  <div class="field">
+    <label for="email">email</label><br>
+    <input name="email" type="text">
+  </div>
+  <div class="field">
+    <label for="user_password">Password</label><br>
+    <input name="password" type="password">
+  </div>
+  <div class="actions">
+    <input name="commit" value="Log In" type="submit">
+  </div>
+</form>
+</div>
