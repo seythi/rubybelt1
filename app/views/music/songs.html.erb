@@ -1,4 +1,5 @@
 <%=link_to 'Log Out', dologout_path, :class => 'logout'%>
+<%= render 'printflashes' if !flash.empty? %>
 <h2>Hello <%=link_to @cuser.fullname, viewplaylist_path(session[:id])%></h2>
 <table>
 <thead>
